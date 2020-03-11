@@ -17,6 +17,11 @@ public class Player {
 		this.deck = deck;
 	}
 	
+	public Player(String name) {
+		this.name = name;
+		this.deck = new Deck();
+	}
+	
 	public void pull() {
 		
 	}
