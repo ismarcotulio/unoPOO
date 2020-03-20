@@ -1,24 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="unoDeck.*"%>
-<%@page import="gameHandler.RandomCode" %>
-<%@page import="gameHandler.Start" %>
-<%@page import="java.util.List"%>
-
+    
+    <%@page import="unoDeck.*"%>
+	<%@page import="gameHandler.RandomCode" %>
+	<%@page import="gameHandler.Start" %>
+	<%@page import="java.util.List"%>
+	
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Service</title>
-	</head>
-	<body>
-	<%
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<%
+
 	Player player1 = new Player("name1");
 	Player player2 = new Player("name2");
 	
 	Start partida1 = new Start(player1, player2);
 	
-int w=0, x=0, y=0, z=0;
+
+	
+	int w=0, x=0, y=0, z=0;
 	
 	out.print("Las cartas del Player 1 son:<br><br>");
 	for (Card c: partida1.getPlayer1().getDeck()){
@@ -44,7 +49,7 @@ int w=0, x=0, y=0, z=0;
 	out.print("<br><br>Las cartas del Deck Principal son:<br><br>");
 	for (Card c : partida1.getPrincipal().getCard()){
 		z++;
-		out.println(String.format("<p>card = %s Value = %s color=%s type = %s img = %s</p>", z, c.getValue(),c.getColor(),c.getType(), c.getImg()));
+		out.println(String.format("<p>Value = %s color=%s type = %s</p>",c.getValue(),c.getColor(),c.getType()));
 	}
 	out.print(String.format("<br>Total de Cartas = %s<br>",z));
 	
@@ -57,6 +62,13 @@ int w=0, x=0, y=0, z=0;
 		out.println(String.format("<p>Value = %s color=%s type = %s</p>",t.getValue(),t.getColor(),t.getType()));
 	}
 	
-	%>
-	</body>
+	RandomCode code = new RandomCode();
+	out.println("<br>"+code.generate());
+	out.println("<br>"+code.generate());
+	out.println("<br>"+code.generate());
+	out.println("<br>"+code.generate());
+
+%>
+
+</body>
 </html>
