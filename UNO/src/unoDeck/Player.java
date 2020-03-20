@@ -1,5 +1,6 @@
 package unoDeck;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
@@ -18,6 +19,11 @@ public class Player {
 		this.setName(name);
 		this.setDeck(deck);
 	}
+	
+	public Player(String name) {
+		this.setName(name);
+		this.deck = new ArrayList<Card>();
+	}
 
 	public List<Card> getDeck() {
 		return deck;
@@ -25,6 +31,11 @@ public class Player {
 
 	public void setDeck(List<Card> deck) {
 		this.deck = deck;
+	}
+	
+	public void setCard(Card card) {
+		//System.out.println(String.format("objeto = %s", card));
+		this.deck.add(card);
 	}
 
 	public Float getScore() {

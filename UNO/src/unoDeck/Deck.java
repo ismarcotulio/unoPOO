@@ -10,11 +10,15 @@ private List<Card> deck;
 	
 	public Deck() {
 		this.deck = new ArrayList<Card>();
-		generateDeck();
+		//generateDeck();
 	}
 	
 	public List<Card> getCard() {
 		return this.deck;
+	}
+	
+	public void setCard(Card card) {
+		this.deck.add(card);
 	}
 	/**
 	 * Pobla a la lista enlazada deck con todas las instancias de nuevas cartas
@@ -56,24 +60,9 @@ private List<Card> deck;
 	 * Reparte las cartas
 	 * @return Devuelve una Lista de Listas enlazadas de Cartas
 	 * */
-	public List<List<Card>> deal() {
-		List<List<Card>> list = new ArrayList<List<Card>>();
-		List<Card> player1 = new ArrayList<Card>();
-		List<Card> player2 = new ArrayList<Card>();
-		List<Card> graveyard = new ArrayList<Card>();
+	public Card deal() {
 		
-		for(int i=0; i<7;i++) {
-			player1.add(this.deck.remove(Random(this.deck.size())));
-			player2.add(this.deck.remove(Random(this.deck.size())));
-		}
-		graveyard.add(this.deck.remove(Random(this.deck.size())));
-		
-		list.add(player1);
-		list.add(player2);
-		list.add(graveyard);
-		list.add(this.deck);
-		
-		return list;
+		return this.deck.remove(Random(this.deck.size()));
 		
 	}
 	
@@ -89,6 +78,10 @@ private List<Card> deck;
 		}
 		return 0;
 		    
+	}
+	
+	public void add(Card card) {
+		this.deck.add(card);
 	}
 		
 }
