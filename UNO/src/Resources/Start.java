@@ -1,9 +1,12 @@
 package Resources;
 
+import unoDeck.PlayerManager;
+
 public class Start {
 	
 	private Deck principalDeck;
 	private Deck currentDeck;
+	private PlayerManager pm;
 	private Player player1;
 	private Player player2;
 	
@@ -11,6 +14,8 @@ public class Start {
 	public Start(Player player1, Player player2) {
 		this.principalDeck = new Deck();
 		this.currentDeck = new Deck();
+		this.pm = new PlayerManager();
+		//this.pm.addPlayer(player1);
 		this.player1 = player1;
 		this.player2 = player2;
 		

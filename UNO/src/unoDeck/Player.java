@@ -29,6 +29,10 @@ public class Player {
 		return deck;
 	}
 
+	public int DeckCount(){
+		return deck.size();
+	}
+
 	public void setDeck(List<Card> deck) {
 		this.deck = deck;
 	}
