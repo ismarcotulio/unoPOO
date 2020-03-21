@@ -1,3 +1,7 @@
+> Cambios realizados:
+-fondo en gradiente ambas pantallas
+-Los archivos html ya estan en jsp
+
 > cambios a realizar en menu:
 - agregar boton creditos.
 - agregar boton de play/mute las musica de fondo.
@@ -10,6 +14,3 @@
 - mejorar el posicionamiento.
 
 El archivo js no esta completo 
-
-
-
