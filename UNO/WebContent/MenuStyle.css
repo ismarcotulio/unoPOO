@@ -16,7 +16,7 @@
 
 }
 body{
-	height:100vh;
+    height:100vh;
     background-image: linear-gradient(to top right,#6ad0de,#e548f9);
     background-repeat:no-repeat;
     background-size:cover;
