@@ -5,14 +5,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel='stylesheet' type='text/css' href='MenuStyle.css'>
+<link rel='stylesheet' type='text/css' href='popupStyle.css'>
 </head>
 <body>
 <%
-out.print("<link rel='stylesheet' type='text/css' href='MenuStyle.css'>");
 out.println("<div id='menuBtns' class='bg-dark btn-container border'><div id='oneLogo' class='logo'></div>"
-+"<div id='btn1'><a href='#' class='btn-ghost red '>Nueva Partida</a></div>"
-+"<div id='btn2'><a href='#' class='btn-ghost orange'>Ingresar </a></div>"
-+"<div id='btn3'><a href='#' class='btn-ghost green'>Scores</a></div></div>");
++"<div id='btn1'><a href='#' id='abrir1' class='btn-ghost red '>Nueva Partida</a></div>"
++"<div id='btn2'><a href='#' id='abrir2' class='btn-ghost orange'>Ingresar </a></div>"
++"<div id='btn3'><a href='#' id='abrir3' class='btn-ghost green'>Scores</a></div>"
++"<div id='miModal' class='modal'><div class='flex' id='flex'><div class='contenido-modal'> "
++"<div class='modal-header flex'><span class='close' id='close'>&times</span>"
++"</div><div class='modal-body'><h3>INGRESAR CODIGO</h3><form action='' >"
++"<input id='contenedor-input' type='text' placeholder='ingrese codigo de acceso'><br><input type='submit' class='btn-submit' value='Ingresar'>"
++"</form></div></div></div></div>");
+
 %>
+<script src="popup.js"></script>
 </body>
 </html>
